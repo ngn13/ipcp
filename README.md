@@ -7,3 +7,13 @@ effort, some I wrote a simple python script that copies
 your specified interface's IP address.
 
 yes im that lazy :P
+
+### Install
+```
+pip install -U https://github.com/ngn13/ipcp/archive/refs/heads/main.zip
+```
+
+### Usage
+```
+ipcp <interface>
+```
