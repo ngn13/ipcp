@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = "0.0.2" 
+VERSION = "0.0.3" 
 DESCRIPTION = "Simple CLI that lets you copy a specified interface's IP address"
 
 setup(

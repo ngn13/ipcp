@@ -1,12 +1,17 @@
 import socket
+import struct
+import fcntl
 import psutil
 import pyperclip
 from sys import argv
 
-def get_ip(intf):
+def get_ip(ifname):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.connect(("8.8.8.8", 80))
-    return s.getsockname()[0]
+    return socket.inet_ntoa(fcntl.ioctl(
+        s.fileno(),
+        0x8915,
+        struct.pack("256s", ifname[:15].encode())
+    )[20:24])
 
 
 def main():
