@@ -25,7 +25,7 @@ def main():
     for i in intfs:
         if i == intf:
             ip = get_ip(intf)
-            print("Address: " + intf)
+            print("Address: " + ip)
             pyperclip.copy(ip)
             print("Copied to clipboard")
             exit()
